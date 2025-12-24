@@ -2,11 +2,13 @@
 
 import { RocketIcon } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import HireMeNow from "./HireMeNow";
-import { TextReveal, AnimatedCounter } from "./AnimationComponents";
+import { TextReveal, AnimatedCounter, ParallaxSection } from "./AnimationComponents";
 
 export default function AboutMe() {
+  const [inView, setInView] = useState(false);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

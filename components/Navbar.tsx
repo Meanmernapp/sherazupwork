@@ -17,11 +17,11 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="flex justify-between items-center px-6 py-4 bg-black text-white max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      {/* Left: Nav Links */}
+    <header className="mx-auto max-w-7xl flex justify-between items-center py-6 px-4 md:px-8 lg:px-16">
+
       <nav className="flex space-x-10">
         {navLinks.map((link) => {
-          // const isActive = pathname === `/${link.toLowerCase()}`;
+
           const href = link === "About" ? "/" : `/${link.toLowerCase()}`;
           const isActive = pathname === href;
 
@@ -40,9 +40,9 @@ export default function Navbar() {
         })}
       </nav>
 
-      {/* Right: Language & Button */}
-      <div className="flex items-center space-x-6">
-        {/* Language Selector */}
+
+      {/* <div className="flex items-center space-x-6">
+
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <button className="flex items-center space-x-1 text-sm hover:opacity-80 transition">
@@ -52,16 +52,21 @@ export default function Navbar() {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="bg-black border border-gray-700 text-white">
             <DropdownMenuItem>EN</DropdownMenuItem>
-            <DropdownMenuItem>FR</DropdownMenuItem>
-            <DropdownMenuItem>DE</DropdownMenuItem>
+
           </DropdownMenuContent>
         </DropdownMenu>
 
-        {/* CV Download */}
-        <Button variant="outline" className="border-gray-600 bg-black text-white hover:bg-white hover:text-black transition">
+
+        <a
+          href="/Resume_Shearz_Hassan_Full_Stack_Engineer.pdf"
+          download
+          className="inline-block border border-gray-600 bg-black text-white px-4 py-2 hover:bg-white hover:text-black transition"
+        >
           Download CV
-        </Button>
-      </div>
+        </a>
+
+
+      </div> */}
     </header>
   );
 }

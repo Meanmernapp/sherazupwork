@@ -2,18 +2,31 @@
 
 import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
+import { useState } from "react";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import HireMeNow from "./HireMeNow";
+import { EmailDialog } from "./ContactInfo";
 
 
 const socialPlatforms = [
-    { name: "LinkedIn", icon: <FaLinkedin size={30} />, link: "https://www.linkedin.com/in/sherazdevelopment/" },
+    // { name: "LinkedIn", icon: <FaLinkedin size={30} />, link: "https://www.linkedin.com/in/sherazdevelopment/" },
     { name: "GitHub", icon: <FaGithub size={30} />, link: "https://github.com/Meanmernapp" },
-    { name: "Mail", icon: <Mail size={30} />, link: "shearzhassan6379@gmail.com" },
-    { name: "Phone Number", icon: <Phone size={30} />, link: "" },
+    // { name: "Mail", icon: <Mail size={30} />, link: "mail" },
+    // { name: "Phone Number", icon: <Phone size={30} />, link: "tel:+923481794020" },
 ];
 
 export default function Footer() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleSocialClick = (link: string) => {
+        if (link === "mail") {
+            setIsOpen(true);
+        } else {
+            window.location.href = link;
+        }
+    };
+
     return (
         <footer className="bg-[#0c0c0c] text-gray-400 px-4 py-10 md:py-10 md:px-20">
             <motion.div
@@ -37,33 +50,26 @@ export default function Footer() {
                 {/* Social Icons */}
                 <div className="flex items-center gap-4">
                     {socialPlatforms.map(({ name, icon, link }) => (
-                        <motion.a
+                        <motion.button
                             whileHover={{ scale: 1.2, rotate: 5 }}
                             transition={{ type: "spring", stiffness: 300 }}
                             key={name}
-                            href={link}
+                            onClick={() => handleSocialClick(link)}
                             aria-label={name}
-                            className="rounded-full bg-gray-700 p-2 hover:bg-white hover:text-black transition-colors"
+                            className="rounded-full bg-gray-700 p-2 hover:bg-white hover:text-black transition-colors cursor-pointer"
                         >
                             {icon}
-                        </motion.a>
+                        </motion.button>
                     ))}
                 </div>
 
                 {/* CTA Button */}
-                <motion.a
-                    href="#"
-                    whileHover={{ scale: 1.05 }}
-                    className="border border-white bg-black px-5 py-2 text-white hover:bg-white hover:text-black transition"
-                >
-                    Hire Me Now!
-                </motion.a>
+                <HireMeNow />
             </motion.div>
 
-            {/* Bottom Text */}
-            {/* <div className="text-center text-sm text-gray-600 mt-10">
-                © {new Date().getFullYear()} Sheraz Hassan. All rights reserved.
-            </div> */}
+            {isOpen && (
+                <EmailDialog handleDone={() => setIsOpen(false)} />
+            )}
         </footer>
     );
 }

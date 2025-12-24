@@ -5,26 +5,26 @@ import { Mail, PhoneCall } from "lucide-react";
 import { FaLinkedin, FaGithub, FaTelegram, FaEnvelope, FaMailBulk } from "react-icons/fa";
 
 const contacts = [
+    // {
+    //     label: "Yasir Iqbal",
+    //     icon: <FaLinkedin size={28} />,
+    //     href: "https://www.linkedin.com/in/sherazdevelopment/",
+    // },
     {
-        label: "Shearz Hassan",
-        icon: <FaLinkedin size={28} />,
-        href: "https://www.linkedin.com/in/sherazdevelopment/",
-    },
-    {
-        label: "Shearz Hassan",
+        label: "Yasir Iqbal",
         icon: <FaGithub size={28} />,
         href: "https://github.com/Meanmernapp",
     },
-    {
-        label: "@cybernef",
-        icon: <PhoneCall size={28} />,
-        href: "+92 (311) - 111 - 1111",
-    },
-    {
-        label: "shearzhassan6379@gmail.com",
-        icon: <FaEnvelope size={28} />,
-        href: "mailto:shearzhassan6379@gmail.com",
-    },
+    // {
+    //     label: "+1 321 447 6769",
+    //     icon: <PhoneCall size={28} />,
+    //     href: "tel:+13214476769", // <-- include `tel:`
+    // },
+    // {
+    //     label: "shearzhassan6379@gmail.com",
+    //     icon: <FaEnvelope size={28} />,
+    //     href: "mailto:shearzhassan6379@gmail.com",
+    // },
 ];
 
 export default function ContactSection() {

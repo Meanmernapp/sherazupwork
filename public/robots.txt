@@ -1,0 +1,13 @@
+# Robots.txt for SEO - Place in /public folder
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*.json$
+Allow: /api/send-email
+
+# Crawl delay (optional, typically not needed for small sites)
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://sherazhassan.dev/sitemap.xml

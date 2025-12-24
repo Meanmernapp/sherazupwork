@@ -1,9 +1,13 @@
 "use client";
 
-import { MailIcon, PhoneIcon, MapPinIcon, RocketIcon, CheckCircle2 } from "lucide-react";
+import { RocketIcon, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { EmailDialog } from "./ContactInfo";
+import HireMeNow from "./HireMeNow";
 
 export default function ContactFooterSpecialization() {
+  const [isOpen, setIsOpen] = useState(false);
   const specializations = [
     "AI/ML-Integrated Web Applications – Designing and building full-stack applications with integrated AI/ML features using Python (FastAPI, Flask), OpenAI, and LangChain",
     "LLM & NLP Solutions – Implementing chatbots, text generation, summarization, and semantic search using OpenAI, Gemini, Hugging Face, and vector DBs like Pinecone & Weaviate",
@@ -15,7 +19,7 @@ export default function ContactFooterSpecialization() {
     "Agile & Sprint Execution – Managing tasks via Jira, ClickUp, and custom-built sprint tools, with a focus on delivery, feedback, and iteration",
   ];
 
-  
+
 
   return (
     <>
@@ -52,16 +56,16 @@ export default function ContactFooterSpecialization() {
           Let's talk about <br /> collaboration!
         </h2>
         <div className="flex flex-wrap justify-center gap-6">
-          <Button className="bg-green-500 hover:bg-green-600 text-black px-6 py-3">
-            Get In Touch
-          </Button>
-          <Button variant="outline" className="border-white bg-black text-white px-6 py-3 hover:bg-white hover:text-black">
-            Hire Me Now!
-          </Button>
+          <a href="https://www.upwork.com/freelancers/sherazreactnextdeveloper" target="_blank" rel="noopener noreferrer">
+            <Button className="bg-green-500 hover:bg-green-600 text-black px-6 py-3">
+              Get In Touch
+            </Button>
+          </a>
+          <HireMeNow />
         </div>
       </section>
 
-     
+
     </>
   );
 }
