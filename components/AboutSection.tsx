@@ -75,13 +75,19 @@ export default function AboutMe() {
 
           <TextReveal delay={0.2}>
             <h2 className="text-lg md:text-2xl font-bold leading-tight" itemProp="about">
-              I'm a Senior Software Engineer with over 6 years of experience in building scalable web applications using Node.js, NestJS, Next.js, React, FastAPI, and Python. I specialize in developing high-performance MVPs that have successfully evolved into million-dollar products.
+              I'm a Senior Full Stack Engineer with 7+ years of experience building scalable web applications across SaaS, AI, analytics, e-commerce, and enterprise platforms.
             </h2>
           </TextReveal>
 
           <TextReveal delay={0.4}>
-            <p className="text-gray-400 text-md" itemProp="description">
+            <p className="hidden" itemProp="description">
               I'm focused on delivering results that exceed expectations—from clean, maintainable code to seamless user experiences.
+            </p>
+          </TextReveal>
+
+          <TextReveal delay={0.4}>
+            <p className="text-gray-400 text-md" itemProp="description">
+              Skilled in React.js, Next.js, Angular, Node.js, NestJS, TypeScript, MongoDB, PostgreSQL, AWS, Docker, REST APIs, GraphQL, microservices, and LLM integrations.
             </p>
           </TextReveal>
 
@@ -110,11 +116,11 @@ export default function AboutMe() {
             {/* Skills List */}
             <ul className="space-y-4 text-gray-300 text-md">
               {[
-                "I'm a full-stack engineer with 6+ Years of commercial experience, currently focused on building AI-ready SSR applications using Next.js, NestJS, Prisma, and PostgreSQL.",
-                "I have strong experience developing modular, production-grade SSR boilerplates, ideal for SaaS and AI/ML-powered platforms.",
-                "Skilled in building AI features such as chatbots, NLP pipelines, LLM prompt chains, and embeddings using OpenAI and LangChain.",
-                "I apply SOLID principles to design adaptive, mobile-first UIs and Docker-ready CI/CD environments on AWS, Heroku, and DigitalOcean.",
-                "From intelligent SaaS tools to internal dashboards, I build future-ready systems that scale.",
+                "Frontend: React.js, Next.js, Angular, TypeScript, Tailwind CSS, Material UI, Redux Toolkit, Zustand, React Query, SSR/SSG, accessibility, and performance optimization.",
+                "Backend: Node.js, Express.js, NestJS, Python, FastAPI, Django, Flask, REST APIs, GraphQL, WebSockets, JWT, OAuth2, RBAC, and secure API design.",
+                "Databases: MongoDB, PostgreSQL, MySQL, Redis, Prisma ORM, SQL/NoSQL modeling, aggregation pipelines, query optimization, and ETL workflows.",
+                "Cloud and DevOps: AWS, Docker, Kubernetes, GitHub Actions, CI/CD pipelines, Linux, Nginx, Vercel, monitoring, logging, and observability.",
+                "Architecture and AI: microservices, distributed systems, Kafka, event-driven architecture, multi-tenant SaaS, OpenAI, Claude, LangChain, RAG, vector databases, and AI-powered search.",
               ].map((point, index) => (
                 <motion.li
                   key={index}
@@ -143,7 +149,7 @@ export default function AboutMe() {
             >
               {[
                 { from: 0, to: 150, label: "Projects completed", suffix: "+" },
-                { from: 0, to: 6, label: "Years experience", suffix: "+" },
+                { from: 0, to: 7, label: "Years experience", suffix: "+" },
                 { from: 0, to: 4, label: "Certificates", suffix: "+" },
               ].map((stat, i) => (
                 <motion.div key={i} variants={cardVariants}>
@@ -175,7 +181,7 @@ export default function AboutMe() {
               Figma → AI-Powered Code Conversion
             </h3>
             <p className="text-gray-400 text-md max-w-2xl">
-              Expert in converting Figma designs into clean, production-ready frontend code using modern component libraries and AI-assisted tooling.
+              Experienced in collaborating with designers and converting Figma designs into clean, production-ready frontend code using modern component libraries and AI-assisted tooling.
             </p>
           </motion.div>
           <motion.div
@@ -220,7 +226,7 @@ export default function AboutMe() {
               AI-Ready Boilerplates & Starter Kits
             </h3>
             <p className="text-gray-400 text-md max-w-2xl">
-              Full-stack SSR boilerplates with Next.js, NestJS, Prisma, PostgreSQL production-ready setups for AI/ML applications.
+              Full-stack SaaS foundations with Next.js, NestJS, Prisma, PostgreSQL, AWS, Docker, CI/CD, GraphQL, LLM, and RAG-ready architecture.
             </p>
           </motion.div>
           <motion.div
@@ -230,19 +236,19 @@ export default function AboutMe() {
             {[
               {
                 title: "Production-ready setups",
-                description: "AI/ML applications with enterprise-grade architecture",
+                description: "SaaS, AI, analytics, e-commerce, and enterprise applications with reliable architecture",
               },
               {
                 title: "Modular architectures",
-                description: "Fast MVP launches with scalable component systems",
+                description: "Microservices, distributed systems, event-driven workflows, Kafka, and multi-tenant SaaS",
               },
               {
                 title: "Cloud deployment",
-                description: "Secure, scalable, and optimized for AWS, Heroku, DigitalOcean",
+                description: "Secure, scalable, and optimized for AWS, Docker, Kubernetes, GitHub Actions, and Vercel",
               },
               {
                 title: "Full-stack integration",
-                description: "Next.js frontend, NestJS backend, Prisma ORM, PostgreSQL database",
+                description: "React, Next.js, Angular, Node.js, NestJS, Python, GraphQL, SQL, and NoSQL systems",
               },
             ].map((item, i) => (
               <motion.div

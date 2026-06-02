@@ -1,12 +1,9 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { ArrowRight, BriefcaseBusiness, RocketIcon } from "lucide-react";
-import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import HireMeNow from "./HireMeNow";
-import { TextReveal, FloatingElement, ParallaxSection } from "./AnimationComponents";
 
 export default function HeroSection() {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -44,19 +41,9 @@ export default function HeroSection() {
         },
     };
 
-    const imageVariants = {
-        hidden: { opacity: 0, scale: 0.8, rotate: -10 },
-        visible: {
-            opacity: 1,
-            scale: 1,
-            rotate: 0,
-            transition: { duration: 1 },
-        },
-    };
-
     return (
         <section 
-            className="bg-black text-white flex flex-col justify-center px-6 py-20 md:flex-row md:items-center md:justify-between relative overflow-hidden"
+            className="bg-black text-white flex flex-col justify-center px-6 py-24 md:items-center relative overflow-hidden"
             itemScope 
             itemType="https://schema.org/Person"
         >
@@ -72,79 +59,45 @@ export default function HeroSection() {
                 transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
             />
 
-            <div className='max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10'>
-                {/* Left Side - Text */}
+            <div className='max-w-6xl mx-auto relative z-10'>
                 <motion.div
-                    className="max-w-2xl space-y-6"
+                    className="max-w-2xl space-y-6 text-center md:text-left"
                     variants={containerVariants}
                     initial="hidden"
                     animate={isLoaded ? "visible" : "hidden"}
                 >
                     <motion.div variants={titleVariants}>
-                        <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+                        <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight">
                             <motion.span
                                 className="text-teal-400 block"
                                 itemProp="name"
                                 whileHover={{ scale: 1.05, color: "#4ade80" }}
                                 transition={{ type: "spring", stiffness: 300 }}
                             >
-                                Yasir Iqbal
+                                Muhammad Yasir Aqeel
                             </motion.span>
                         </h1>
                     </motion.div>
 
                     <motion.p
-                        className="text-gray-400 text-lg"
+                        className="text-gray-300 text-lg"
                         itemProp="jobTitle"
                         variants={itemVariants}
                     >
-                        <span className="text-green-400 font-semibold">Senior Full-Stack Engineer</span> | AI/ML Developer | 6+ Years Experience
+                        <span className="text-green-400 font-semibold">Senior Full Stack Engineer</span> | MERN/MEAN | Scalable SaaS Engineer | 7+ Years Experience
                     </motion.p>
 
                     <motion.p
-                        className="text-gray-400 text-base hidden"
+                        className="text-gray-400 text-base"
                         itemProp="description"
                         variants={itemVariants}
                     >
-                        AWS-Certified | MERN | React Native | Full Stack Developer | Building Scalable Web & Mobile Applications
+                        React.js, Node.js, NestJS, TypeScript, Next.js, Angular, AWS, Docker, Microservices, Python, GraphQL, LLM, RAG, Kafka, Kubernetes, SQL, Tailwind CSS, and React Native.
                     </motion.p>
 
                     <motion.div variants={itemVariants}>
                         <HireMeNow />
                     </motion.div>
-                </motion.div>
-
-                {/* Right Side - Illustration with Parallax */}
-                <motion.div
-                    className="mt-10 md:mt-0 w-full max-w-sm mx-auto md:max-w-md"
-                    variants={imageVariants}
-                    initial="hidden"
-                    animate={isLoaded ? "visible" : "hidden"}
-                >
-                    <FloatingElement duration={4} delay={0.5}>
-                        <div className="flex justify-center md:justify-end relative">
-                            {/* Glow background */}
-                            <motion.div
-                                className="absolute inset-0 bg-gradient-to-r from-teal-400 to-green-400 rounded-full blur-2xl opacity-20 -z-10"
-                                animate={{ scale: [1, 1.2, 1] }}
-                                transition={{ duration: 3, repeat: Infinity }}
-                            />
-                            <motion.div
-                                whileHover={{ scale: 1.05, rotate: 5 }}
-                                transition={{ type: "spring", stiffness: 300 }}
-                            >
-                                <Image
-                                    src="/portfolio-picture.jpeg"
-                                    alt="Yasir Iqbal - Senior Full-Stack Engineer"
-                                    width={300}
-                                    height={250}
-                                    className="rounded-full shadow-2xl border-2 border-teal-400/50 hover:border-green-400/50 transition-colors"
-                                    itemProp="image"
-                                    priority
-                                />
-                            </motion.div>
-                        </div>
-                    </FloatingElement>
                 </motion.div>
             </div>
 

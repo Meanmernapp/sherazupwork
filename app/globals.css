@@ -116,7 +116,14 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground;
+  }
+  ::selection {
+    background: rgb(45 212 191 / 0.35);
+    color: white;
   }
 }

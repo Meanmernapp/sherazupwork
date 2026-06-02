@@ -19,6 +19,17 @@ export default function ContactFooterSpecialization() {
     "Agile & Sprint Execution – Managing tasks via Jira, ClickUp, and custom-built sprint tools, with a focus on delivery, feedback, and iteration",
   ];
 
+  const resumeSpecializations = [
+    "Scalable SaaS Engineering - Building multi-tenant, high-performance SaaS platforms with React.js, Next.js, Angular, Node.js, NestJS, TypeScript, MongoDB, and PostgreSQL.",
+    "Backend APIs & Microservices - Designing REST APIs, GraphQL services, WebSockets, JWT, OAuth2, RBAC, rate limiting, and secure distributed systems.",
+    "Cloud, DevOps & Delivery - Deploying AWS workloads across EC2, S3, RDS, Lambda, CloudFront, API Gateway, ECS, and EKS with Docker, Kubernetes, and CI/CD pipelines.",
+    "AI & Automation - Integrating OpenAI, Anthropic Claude, LangChain, RAG, vector databases, prompt engineering, AI-powered search, and intelligent workflows.",
+    "Data Engineering - Working with MongoDB, PostgreSQL, MySQL, Redis, Prisma ORM, SQL/NoSQL modeling, aggregation pipelines, query optimization, and ETL pipelines.",
+    "Frontend Engineering - Creating responsive, accessible interfaces with React.js, Next.js, Angular, Tailwind CSS, Material UI, Redux Toolkit, Zustand, and React Query.",
+    "Testing & Quality - Using Jest, React Testing Library, Cypress, Playwright, Mocha, Chai, Postman, integration testing, E2E testing, reviews, and documentation.",
+    "Remote Collaboration - Leading features in Agile/Scrum teams with Jira, Confluence, GitHub/GitLab, Swagger, Figma collaboration, and strong SDLC ownership.",
+  ];
+
 
 
   return (
@@ -33,7 +44,7 @@ export default function ContactFooterSpecialization() {
               My specialization is as follows:
             </h2>
             <ul className="space-y-4 text-gray-300">
-              {specializations.map((item, index) => (
+              {resumeSpecializations.map((item, index) => (
                 <li key={index} className="flex items-start gap-2 text-sm ">
                   <CheckCircle2 className="text-green-400 mt-1" size={18} />
                   {item}
@@ -56,7 +67,7 @@ export default function ContactFooterSpecialization() {
           Let's talk about <br /> collaboration!
         </h2>
         <div className="flex flex-wrap justify-center gap-6">
-          <a href="https://www.upwork.com/freelancers/sherazreactnextdeveloper" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:codewith.yasiraqeel@gmail.com" target="_blank" rel="noopener noreferrer">
             <Button className="bg-green-500 hover:bg-green-600 text-black px-6 py-3">
               Get In Touch
             </Button>

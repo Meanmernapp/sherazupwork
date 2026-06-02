@@ -1,75 +1,48 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone } from "lucide-react";
-import { useState } from "react";
-
+import { Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import HireMeNow from "./HireMeNow";
-import { EmailDialog } from "./ContactInfo";
-
 
 const socialPlatforms = [
-    // { name: "LinkedIn", icon: <FaLinkedin size={30} />, link: "https://www.linkedin.com/in/sherazdevelopment/" },
-    { name: "GitHub", icon: <FaGithub size={30} />, link: "https://github.com/Meanmernapp" },
-    // { name: "Mail", icon: <Mail size={30} />, link: "mail" },
-    // { name: "Phone Number", icon: <Phone size={30} />, link: "tel:+923481794020" },
+  { name: "LinkedIn", icon: <FaLinkedin size={18} />, link: "https://www.linkedin.com/in/muhammad-yasir-aqeel-32a602413" },
+  { name: "GitHub", icon: <FaGithub size={18} />, link: "https://github.com/Meanmernapp" },
+  { name: "Mail", icon: <Mail size={18} />, link: "mailto:codewith.yasiraqeel@gmail.com" },
 ];
 
 export default function Footer() {
-    const [isOpen, setIsOpen] = useState(false);
+  return (
+    <footer className="border-t border-white/10 bg-[#0a0a0a] px-6 py-8 md:px-8">
+      <motion.div
+        className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 md:flex-row"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="text-center text-sm text-gray-400 md:text-left">
+          Developed by <span className="font-medium text-teal-400">Yasir Aqeel</span> with{" "}
+          <span className="font-medium text-white">Next.js</span>
+        </div>
 
-    const handleSocialClick = (link: string) => {
-        if (link === "mail") {
-            setIsOpen(true);
-        } else {
-            window.location.href = link;
-        }
-    };
-
-    return (
-        <footer className="bg-[#0c0c0c] text-gray-400 px-4 py-10 md:py-10 md:px-20">
-            <motion.div
-                className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+        <div className="flex items-center gap-3">
+          {socialPlatforms.map(({ name, icon, link }) => (
+            <a
+              key={name}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={name}
+              className="rounded-full border border-white/10 p-2.5 text-gray-400 transition hover:border-teal-400/40 hover:bg-white/5 hover:text-teal-400"
             >
-                {/* Left Side */}
-                <div className="flex flex-col gap-1 md:gap-4 text-sm md:text-base text-gray-300">
-                    <div>
-                        Developed by <span className="text-green-400 font-semibold">Sheraz Hassan</span>
-                    </div>
-                    <div>
-                        with <span className="text-green-400 font-semibold">Next.js</span>
-                    </div>
-                </div>
+              {icon}
+            </a>
+          ))}
+        </div>
 
-
-                {/* Social Icons */}
-                <div className="flex items-center gap-4">
-                    {socialPlatforms.map(({ name, icon, link }) => (
-                        <motion.button
-                            whileHover={{ scale: 1.2, rotate: 5 }}
-                            transition={{ type: "spring", stiffness: 300 }}
-                            key={name}
-                            onClick={() => handleSocialClick(link)}
-                            aria-label={name}
-                            className="rounded-full bg-gray-700 p-2 hover:bg-white hover:text-black transition-colors cursor-pointer"
-                        >
-                            {icon}
-                        </motion.button>
-                    ))}
-                </div>
-
-                {/* CTA Button */}
-                <HireMeNow />
-            </motion.div>
-
-            {isOpen && (
-                <EmailDialog handleDone={() => setIsOpen(false)} />
-            )}
-        </footer>
-    );
+        <HireMeNow />
+      </motion.div>
+    </footer>
+  );
 }

@@ -90,6 +90,22 @@ const projects: any = [
     //     "summary": "Built an AI-powered sourcing tool that analyzes market listings and identifies potential acquisition targets based on filters.",
     //     "feedback": "⭐⭐⭐⭐ 'Quick build and good integration of AI logic.'"
     // }
+    {
+        "title": "Deal Sourcing Tool",
+        "link": "https://dealsourcing-two.vercel.app/",
+        "stack": "Next.js + Node.js + AI APIs",
+        "summary": "Built an AI-powered sourcing tool that analyzes market listings and identifies potential acquisition targets based on filters.",
+        "feedback": "AI-powered sourcing, ranking, and market analysis.",
+        img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
+    },
+    {
+        "title": "Ev Charger",
+        "link": "https://react-webapp-ev-charger.vercel.app/",
+        "stack": "React + Tailwind CSS",
+        "summary": "Built a responsive EV charger web app for browsing stations, checking availability, and managing charging sessions.",
+        "feedback": "Clean UI with smooth interactions and mobile-friendly layout.",
+        img: "/shot/ev-charger.png",
+    }
 ]
 
 
@@ -104,16 +120,16 @@ export default function ProjectsSection() {
     }, []);
 
     return (
-        <div className="min-h-screen px-8 py-20 bg-black text-white">
-            <div className=" mx-auto max-w-6xl">
-
-                <h2 className="text-4xl font-bold mb-10">Projects I have worked on:</h2>
+        <div className="min-h-screen px-6 py-16 md:px-8 md:py-20 bg-black text-white">
+            <div className="mx-auto max-w-6xl">
+                <p className="text-sm font-medium uppercase tracking-widest text-teal-400 mb-2">Portfolio</p>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-10">Projects I have worked on</h2>
 
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
                     {(loading ? Array.from({ length: 6 }) : projects).map((project: any, i: any) => (
                         <motion.div
                             key={i}
-                            className={`relative w-full h-52 rounded-xl overflow-hidden bg-white/5 ${loading ? "animate-pulse" : "hover:scale-[1.02] transition-all"
+                            className={`relative w-full h-52 rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-lg ${loading ? "animate-pulse" : "hover:scale-[1.02] hover:border-teal-400/30 transition-all"
                                 }`}
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -129,7 +145,7 @@ export default function ProjectsSection() {
                                         fill
                                         className="object-cover"
                                     />
-                                    <div className="absolute bottom-0 left-0 right-0 p-3 bg-black/60 backdrop-blur text-sm font-medium">
+                                    <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/90 to-transparent backdrop-blur-sm text-sm font-medium">
                                         {project.title}
                                         {project.isPrivate && (
                                             <p className="text-xs text-gray-400 mt-1">

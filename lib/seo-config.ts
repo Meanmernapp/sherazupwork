@@ -1,82 +1,89 @@
 /**
- * SEO Configuration for Sheraz Hassan's Portfolio
+ * SEO Configuration for Muhammad Yasir Aqeel's Portfolio
  * Contains reusable SEO metadata, schema markup, and structured data
  */
 
 export const seoConfig = {
   site: {
-    name: "Yasir Iqbal - Full-Stack Engineer",
+    name: "Muhammad Yasir Aqeel - Senior Full Stack Engineer",
     url: "https://sherazhassan.dev", // Update with your actual domain
-    description: "Senior Full-Stack Engineer with 6+ years of experience building scalable web applications and AI-powered systems",
+    description: "Senior Full Stack Engineer with 7+ years of experience building scalable SaaS, AI, analytics, e-commerce, and enterprise platforms",
     image: "https://sherazhassan.dev/portfolio-picture.jpg",
-    email: "shearzhassan6379@gmail.com",
-    phone: "+923481794020",
+    email: "codewith.yasiraqeel@gmail.com",
   },
 
   social: {
     github: "https://github.com/Meanmernapp",
-    linkedin: "https://linkedin.com/in/sherazdevelopment",
-    twitter: "https://twitter.com/sherazhassan",
+    linkedin: "https://www.linkedin.com/in/muhammad-yasir-aqeel-32a602413",
   },
 
   expertise: {
-    title: "Senior Full-Stack Engineer & AI Developer",
-    yearsExperience: "6+",
+    title: "Senior Full Stack Engineer | MERN/MEAN | Scalable SaaS Engineer",
+    yearsExperience: "7+",
     skills: [
       "Full Stack Development",
+      "React.js",
+      "Angular",
       "Node.js",
       "NestJS",
       "Next.js",
-      "React",
       "Python",
       "FastAPI",
       "TypeScript",
+      "MongoDB",
       "PostgreSQL",
-      "Prisma ORM",
       "Docker",
+      "Kubernetes",
       "AWS",
-      "AI/ML Integration",
-      "LLM APIs",
-      "System Design",
+      "GraphQL",
       "Microservices",
+      "Kafka",
+      "LLM",
+      "RAG",
+      "LangChain",
+      "System Design",
       "CI/CD",
-      "Agile Development",
+      "React Native",
     ],
     specialties: [
-      "Scalable Web Applications",
-      "AI-Ready SSR Systems",
-      "MVP Development",
-      "SaaS Development",
-      "Figma to Code Conversion",
-      "Production-Grade Boilerplates",
+      "Scalable SaaS Engineering",
+      "MERN and MEAN Development",
+      "Cloud, DevOps, and CI/CD",
+      "Microservices and Distributed Systems",
+      "LLM and RAG Integrations",
+      "AI-Powered Search and Automation",
     ],
   },
 
   pages: {
     home: {
-      title: "Sheraz Hassan - Senior Full-Stack Engineer | AI/ML Developer | 6+ Years Experience",
-      description: "Senior Full-Stack Engineer with 6+ years of experience building scalable web applications. Specializing in Next.js, NestJS, React, Node.js, FastAPI, Python, and AI-powered systems.",
+      title: "Muhammad Yasir Aqeel - Senior Full Stack Engineer | MERN/MEAN | Scalable SaaS Engineer",
+      description: "Senior Full Stack Engineer with 7+ years of experience building scalable SaaS, AI, analytics, e-commerce, and enterprise platforms.",
       keywords: [
-        "Sheraz Hassan",
+        "Muhammad Yasir Aqeel",
+        "Yasir Aqeel",
         "Full Stack Developer",
         "Senior Software Engineer",
         "Next.js Developer",
+        "React Developer",
+        "Angular Developer",
         "AI Developer",
+        "SaaS Engineer",
         "Web Developer",
         "Full Stack Engineer",
       ],
     },
     about: {
-      title: "About Sheraz Hassan - Full-Stack Engineer & Developer",
-      description: "Learn about Sheraz Hassan's 6+ years of professional experience in building scalable web applications, AI systems, and production-grade solutions.",
+      title: "About Muhammad Yasir Aqeel - Senior Full Stack Engineer",
+      description: "Learn about Muhammad Yasir Aqeel's 7+ years of professional experience in scalable SaaS, AI, analytics, e-commerce, and enterprise platforms.",
     },
     projects: {
-      title: "Projects - Sheraz Hassan's Portfolio",
-      description: "Explore Sheraz Hassan's portfolio of successful projects ranging from MVPs to million-dollar products built with modern web technologies.",
+      title: "Projects - Muhammad Yasir Aqeel Portfolio",
+      description: "Explore Muhammad Yasir Aqeel's portfolio of SaaS, AI, analytics, e-commerce, and enterprise projects built with modern web technologies.",
     },
     contact: {
-      title: "Contact Sheraz Hassan - Full-Stack Engineer",
-      description: "Get in touch with Sheraz Hassan for full-stack development, AI integration, or consultation services.",
+      title: "Contact Muhammad Yasir Aqeel - Senior Full Stack Engineer",
+      description: "Get in touch with Muhammad Yasir Aqeel for full-stack development, SaaS engineering, cloud delivery, AI integration, or consultation services.",
     },
   },
 
@@ -86,28 +93,27 @@ export const seoConfig = {
   personSchema: {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Yasir Iqbal",
+    name: "Muhammad Yasir Aqeel",
     url: "https://sherazhassan.dev",
     image: "https://sherazhassan.dev/portfolio-picture.jpg",
-    description: "Senior Full-Stack Engineer with 6+ years of experience building scalable web applications and AI-powered systems",
-    jobTitle: "Senior Full-Stack Engineer",
+    description: "Senior Full Stack Engineer with 7+ years of experience building scalable SaaS, AI, analytics, e-commerce, and enterprise platforms",
+    jobTitle: "Senior Full Stack Engineer",
     birthDate: "",
     nationality: "Pakistani",
     knowsLanguage: ["English", "Urdu"],
     sameAs: [
       "https://github.com/Meanmernapp",
-      "https://linkedin.com/in/sherazdevelopment",
-      "https://twitter.com/sherazhassan",
+      "https://www.linkedin.com/in/muhammad-yasir-aqeel-32a602413",
     ],
     workLocation: {
       "@type": "Place",
       address: {
         "@type": "PostalAddress",
         addressCountry: "PK",
+        addressLocality: "Lahore",
       },
     },
-    email: "shearzhassan6379@gmail.com",
-    telephone: "+923481794020",
+    email: "codewith.yasiraqeel@gmail.com",
   },
 
   /**
@@ -116,19 +122,18 @@ export const seoConfig = {
   organizationSchema: {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Yasir Iqbal - Full-Stack Engineer",
+    name: "Muhammad Yasir Aqeel - Senior Full Stack Engineer",
     url: "https://sherazhassan.dev",
     logo: "https://sherazhassan.dev/globe.svg",
-    description: "Professional Full-Stack Software Engineer specializing in scalable web applications and AI-powered systems",
+    description: "Professional Senior Full Stack Engineer specializing in scalable SaaS, AI-powered systems, microservices, cloud delivery, and enterprise platforms",
     sameAs: [
       "https://github.com/Meanmernapp",
-      "https://linkedin.com/in/sherazdevelopment",
+      "https://www.linkedin.com/in/muhammad-yasir-aqeel-32a602413",
     ],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Professional Services",
-      email: "shearzhassan6379@gmail.com",
-      telephone: "+923481794020",
+      email: "codewith.yasiraqeel@gmail.com",
     },
   },
 
@@ -189,7 +194,5 @@ export function generateTwitterTags(title: string, description: string) {
     "twitter:card": "summary_large_image",
     "twitter:title": title,
     "twitter:description": description,
-    "twitter:creator": "@sherazhassan",
-    "twitter:site": "@sherazhassan",
   };
 }

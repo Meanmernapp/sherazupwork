@@ -66,7 +66,7 @@ export default function AboutMe() {
         {/* Header Section */}
         <motion.div className="space-y-6 max-w-xl mb-16" variants={itemVariants}>
           <motion.p
-            className="text-sm text-green-400 uppercase tracking-wider font-semibold"
+            className="text-sm text-teal-400 uppercase tracking-wider font-semibold"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -77,7 +77,7 @@ export default function AboutMe() {
 
           <TextReveal delay={0.2}>
             <h2 className="text-lg md:text-2xl font-bold leading-tight" itemProp="about">
-              I'm a Senior Software Engineer with over 6 years of experience in building scalable web applications using Node.js, NestJS, Next.js, React, FastAPI, and Python. I specialize in developing high-performance MVPs that have successfully evolved into million-dollar products.
+              I'm a Senior Full Stack Engineer with 7+ years of experience building scalable web applications across SaaS, AI, analytics, e-commerce, and enterprise platforms.
             </h2>
           </TextReveal>
 
@@ -112,7 +112,7 @@ export default function AboutMe() {
             {/* Skills List */}
             <ul className="space-y-4 text-gray-300 text-md">
               {[
-                "I'm a full-stack engineer with 6+ Years of commercial experience, currently focused on building AI-ready SSR applications using Next.js, NestJS, Prisma, and PostgreSQL.",
+                "I'm a full-stack engineer with 7+ years of commercial experience building SaaS, AI, analytics, e-commerce, and enterprise platforms with React.js, Next.js, Angular, Node.js, NestJS, TypeScript, AWS, Docker, and microservices.",
                 "I have strong experience developing modular, production-grade SSR boilerplates, ideal for SaaS and AI/ML-powered platforms.",
                 "Skilled in building AI features such as chatbots, NLP pipelines, LLM prompt chains, and embeddings using OpenAI and LangChain.",
                 "I apply SOLID principles to design adaptive, mobile-first UIs and Docker-ready CI/CD environments on AWS, Heroku, and DigitalOcean.",

@@ -59,12 +59,11 @@ const techData = {
 
 export default function TechnologiesSection() {
     return (
-        <div className="bg-black text-white px-8 py-16 ">
-            <div className=" mx-auto max-w-6xl">
-
-
-                <h2 className="text-4xl font-bold mb-6">Technologies that I use</h2>
-                <p className="text-gray-400 mb-4">
+        <div className="bg-black text-white px-6 py-16 md:px-8 md:py-20">
+            <div className="mx-auto max-w-6xl">
+                <p className="text-sm font-medium uppercase tracking-widest text-teal-400 mb-2">Stack</p>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">Technologies that I use</h2>
+                <p className="text-gray-400 mb-4 max-w-2xl">
                     Here are the technologies with which I have worked and have some experience — frameworks, databases, libraries, and tools.
                 </p>
                 <p className="text-gray-400 mb-10">
@@ -74,12 +73,12 @@ export default function TechnologiesSection() {
 
                 {Object.entries(techData).map(([category, items]) => (
                     <div key={category} className="mb-10">
-                        <h3 className="text-2xl font-semibold mb-4 border-l-4 border-green-500 pl-4">{category}</h3>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-6">
+                        <h3 className="text-xl font-semibold mb-4 border-l-2 border-teal-400 pl-4 text-gray-100">{category}</h3>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-4">
                             {items.map(({ name, icon }) => (
                                 <div
                                     key={name}
-                                    className="flex flex-col items-center justify-center p-4 bg-white/5 hover:bg-white/10 transition rounded-xl shadow-md backdrop-blur-sm"
+                                    className="flex flex-col items-center justify-center p-4 border border-white/10 bg-white/5 hover:border-teal-400/30 hover:bg-white/10 transition rounded-xl"
                                 >
                                     {icon}
                                     <span className="mt-2 text-sm text-center">{name}</span>
