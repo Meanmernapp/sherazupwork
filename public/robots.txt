@@ -10,4 +10,4 @@ Allow: /api/send-email
 Crawl-delay: 1
 
 # Sitemap location
-Sitemap: https://sherazhassan.dev/sitemap.xml
+Sitemap: https://sherazhassanupwork.vercel.app/sitemap.xml

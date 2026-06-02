@@ -1,117 +1,95 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import HireMeNow from "./HireMeNow";
 
+const skills = [
+  "React", "Next.js", "Angular", "Node.js", "NestJS", "Python",
+  "GraphQL", "AWS", "Docker", "Kubernetes", "MongoDB", "Kafka",
+];
+
 export default function HeroSection() {
-    const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-    useEffect(() => {
-        setIsLoaded(true);
-    }, []);
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.2,
-                delayChildren: 0.1,
-            },
-        },
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.8 },
-        },
-    };
-
-    const titleVariants = {
-        hidden: { opacity: 0, y: 30 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 1 },
-        },
-    };
-
-    return (
-        <section 
-            className="bg-black text-white flex flex-col justify-center px-6 py-24 md:items-center relative overflow-hidden"
-            itemScope 
-            itemType="https://schema.org/Person"
+  return (
+    <section
+      className="relative overflow-hidden px-5 pb-20 pt-8 md:px-10 md:pt-12"
+      itemScope
+      itemType="https://schema.org/Person"
+    >
+      <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.2fr_1fr]">
+        <motion.div
+          className="space-y-8"
+          initial={{ opacity: 0, y: 24 }}
+          animate={isLoaded ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7 }}
         >
-            {/* Animated background elements */}
-            <motion.div
-                className="absolute -top-40 -left-40 w-80 h-80 bg-teal-400/10 rounded-full blur-3xl"
-                animate={{ x: [0, 50, 0], y: [0, 30, 0] }}
-                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <motion.div
-                className="absolute -bottom-40 -right-40 w-80 h-80 bg-green-400/10 rounded-full blur-3xl"
-                animate={{ x: [0, -50, 0], y: [0, -30, 0] }}
-                transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            />
+          <span className="inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-violet-300">
+            <span className="h-2 w-2 rounded-full bg-amber-400" />
+            Senior Full Stack Engineer
+          </span>
 
-            <div className='max-w-6xl mx-auto relative z-10'>
-                <motion.div
-                    className="max-w-2xl space-y-6 text-center md:text-left"
-                    variants={containerVariants}
-                    initial="hidden"
-                    animate={isLoaded ? "visible" : "hidden"}
-                >
-                    <motion.div variants={titleVariants}>
-                        <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight">
-                            <motion.span
-                                className="text-teal-400 block"
-                                itemProp="name"
-                                whileHover={{ scale: 1.05, color: "#4ade80" }}
-                                transition={{ type: "spring", stiffness: 300 }}
-                            >
-                                Muhammad Yasir Aqeel
-                            </motion.span>
-                        </h1>
-                    </motion.div>
+          <h1 className="text-4xl font-bold leading-[1.1] tracking-tight md:text-6xl lg:text-7xl" itemProp="name">
+            Hi, I&apos;m{" "}
+            <span className="accent-gradient">Awais Hassan</span>
+          </h1>
 
-                    <motion.p
-                        className="text-gray-300 text-lg"
-                        itemProp="jobTitle"
-                        variants={itemVariants}
-                    >
-                        <span className="text-green-400 font-semibold">Senior Full Stack Engineer</span> | MERN/MEAN | Scalable SaaS Engineer | 7+ Years Experience
-                    </motion.p>
+          <p className="max-w-xl text-lg text-slate-400" itemProp="jobTitle">
+            7+ years building scalable MEAN/MERN apps, cloud systems, and AI-powered SaaS — based in Lahore, Pakistan.
+          </p>
 
-                    <motion.p
-                        className="text-gray-400 text-base"
-                        itemProp="description"
-                        variants={itemVariants}
-                    >
-                        React.js, Node.js, NestJS, TypeScript, Next.js, Angular, AWS, Docker, Microservices, Python, GraphQL, LLM, RAG, Kafka, Kubernetes, SQL, Tailwind CSS, and React Native.
-                    </motion.p>
+          <div className="flex flex-wrap gap-2">
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                className="rounded-lg border border-white/[0.06] bg-[#141820] px-3 py-1.5 text-xs font-medium text-slate-300"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
 
-                    <motion.div variants={itemVariants}>
-                        <HireMeNow />
-                    </motion.div>
-                </motion.div>
-            </div>
-
-            {/* Scroll indicator */}
-            <motion.div
-                className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
+          <div className="flex flex-wrap gap-4 pt-2">
+            <HireMeNow />
+            <a
+              href="/projects"
+              className="inline-flex items-center rounded-full border border-white/15 px-6 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-violet-400/50 hover:bg-white/5"
             >
-                <div className="text-center text-gray-400 text-sm">
-                    <p>Scroll to explore</p>
-                    <ArrowRight className="rotate-90 mx-auto mt-2 h-5 w-5" />
-                </div>
-            </motion.div>
-        </section>
-    );
+              View Projects
+            </a>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="card-surface relative p-8 md:p-10"
+          initial={{ opacity: 0, x: 24 }}
+          animate={isLoaded ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.15 }}
+        >
+          <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-violet-600/20 blur-3xl" />
+          <p className="mb-6 text-sm font-medium text-slate-500">At a glance</p>
+          <div className="space-y-6">
+            {[
+              { value: "7+", label: "Years experience" },
+              { value: "150+", label: "Projects delivered" },
+              { value: "MERN/MEAN", label: "Core stack" },
+            ].map((item) => (
+              <div key={item.label} className="flex items-baseline justify-between border-b border-white/[0.06] pb-4 last:border-0 last:pb-0">
+                <span className="text-2xl font-bold text-white md:text-3xl">{item.value}</span>
+                <span className="text-sm text-slate-500">{item.label}</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 text-sm leading-relaxed text-slate-400" itemProp="description">
+            React.js, Node.js, NestJS, Express.js, Python, GraphQL, Microservices, MySQL, MongoDB, AWS, GCP, Firebase, Redux, and Socket.io.
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
 }

@@ -120,23 +120,23 @@ export default function ProjectsSection() {
     }, []);
 
     return (
-        <div className="min-h-screen px-6 py-16 md:px-8 md:py-20 bg-black text-white">
+        <div className="page-wrap">
             <div className="mx-auto max-w-6xl">
-                <p className="text-sm font-medium uppercase tracking-widest text-teal-400 mb-2">Portfolio</p>
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-10">Projects I have worked on</h2>
+                <p className="section-eyebrow mb-3">03 — Work</p>
+                <h2 className="section-title mb-12">Selected projects</h2>
 
-                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {(loading ? Array.from({ length: 6 }) : projects).map((project: any, i: any) => (
                         <motion.div
                             key={i}
-                            className={`relative w-full h-52 rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-lg ${loading ? "animate-pulse" : "hover:scale-[1.02] hover:border-teal-400/30 transition-all"
+                            className={`group relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/[0.08] bg-[#141820] ${loading ? "animate-pulse" : "transition hover:border-violet-500/40 hover:shadow-xl hover:shadow-violet-900/10"
                                 }`}
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.15 }}
                         >
                             {loading ? (
-                                <div className="w-full h-full bg-gray-800 rounded-lg"></div>
+                                <div className="h-full w-full bg-[#1c2230]"></div>
                             ) : (
                                 <a href={project.link} target="_blank">
                                     <Image
@@ -145,8 +145,8 @@ export default function ProjectsSection() {
                                         fill
                                         className="object-cover"
                                     />
-                                    <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-black/90 to-transparent backdrop-blur-sm text-sm font-medium">
-                                        {project.title}
+                                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0a0c10] via-[#0a0c10]/80 to-transparent p-4 pt-12">
+                                        <p className="font-semibold text-white">{project.title}</p>
                                         {project.isPrivate && (
                                             <p className="text-xs text-gray-400 mt-1">
                                                 * Not publicly available

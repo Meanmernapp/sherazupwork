@@ -59,29 +59,25 @@ const techData = {
 
 export default function TechnologiesSection() {
     return (
-        <div className="bg-black text-white px-6 py-16 md:px-8 md:py-20">
+        <div className="page-wrap">
             <div className="mx-auto max-w-6xl">
-                <p className="text-sm font-medium uppercase tracking-widest text-teal-400 mb-2">Stack</p>
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">Technologies that I use</h2>
-                <p className="text-gray-400 mb-4 max-w-2xl">
-                    Here are the technologies with which I have worked and have some experience — frameworks, databases, libraries, and tools.
+                <p className="section-eyebrow mb-3">04 — Stack</p>
+                <h2 className="section-title mb-6">Technologies I work with</h2>
+                <p className="mb-12 max-w-2xl text-slate-400">
+                    Frameworks, databases, libraries, and tools I use to ship production-ready products—from greenfield builds to existing codebases.
                 </p>
-                <p className="text-gray-400 mb-10">
-                    I'm comfortable starting a project from scratch or jumping into existing ones that use these technologies.
-                </p>
-
 
                 {Object.entries(techData).map(([category, items]) => (
-                    <div key={category} className="mb-10">
-                        <h3 className="text-xl font-semibold mb-4 border-l-2 border-teal-400 pl-4 text-gray-100">{category}</h3>
-                        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-4">
+                    <div key={category} className="mb-12">
+                        <h3 className="mb-5 font-mono text-sm font-semibold uppercase tracking-wider text-amber-400">{category}</h3>
+                        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
                             {items.map(({ name, icon }) => (
                                 <div
                                     key={name}
-                                    className="flex flex-col items-center justify-center p-4 border border-white/10 bg-white/5 hover:border-teal-400/30 hover:bg-white/10 transition rounded-xl"
+                                    className="card-surface flex flex-col items-center justify-center p-5 transition hover:border-violet-500/30 hover:bg-[#1c2230]"
                                 >
                                     {icon}
-                                    <span className="mt-2 text-sm text-center">{name}</span>
+                                    <span className="mt-3 text-center text-xs font-medium text-slate-400">{name}</span>
                                 </div>
                             ))}
                         </div>

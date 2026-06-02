@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const geistMono = Geist_Mono({
@@ -15,59 +16,53 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Yasir Aqeel - Senior Full Stack Engineer | MERN/MEAN | Scalable SaaS Engineer",
-  description: "Senior Full Stack Engineer with 7+ years of experience building scalable SaaS, AI, analytics, e-commerce, and enterprise platforms using React.js, Next.js, Angular, Node.js, NestJS, TypeScript, AWS, Docker, microservices, GraphQL, LLM, and RAG.",
+  title: "Awais Hassan - Senior Full Stack Engineer | MERN | MEAN",
+  description:
+    "Senior Full Stack Engineer with 7+ years specializing in MEAN/MERN stack, scalable web apps, cloud deployments, CI/CD, and AI-powered SaaS integrations. Lahore, Pakistan.",
   keywords: [
+    "Awais Hassan",
     "Full Stack Engineer",
-    "Muhammad Yasir Aqeel",
-    "Yasir Aqeel",
-    "Software Developer",
+    "MERN Stack",
+    "MEAN Stack",
+    "React.js",
     "Next.js",
-    "React",
     "Angular",
     "Node.js",
     "NestJS",
-    "Python",
-    "MERN",
-    "MEAN",
-    "AI Developer",
-    "LLM",
-    "RAG",
-    "SaaS Engineer",
-    "Web Developer",
     "TypeScript",
-    "MongoDB",
-    "PostgreSQL",
+    "Python",
+    "AI Integration",
     "AWS",
     "Docker",
     "Kubernetes",
-    "Microservices",
-    "GraphQL",
+    "Lahore Pakistan",
   ],
-  authors: [{ name: "Muhammad Yasir Aqeel" }],
-  creator: "Muhammad Yasir Aqeel",
-  publisher: "Muhammad Yasir Aqeel",
+  authors: [{ name: "Awais Hassan" }],
+  creator: "Awais Hassan",
+  publisher: "Awais Hassan",
   robots: "index, follow",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://sherazhassanupwork.vercel.app",
-    siteName: "Muhammad Yasir Aqeel Portfolio",
-    title: "Muhammad Yasir Aqeel - Senior Full Stack Engineer",
-    description: "Senior Full Stack Engineer with 7+ years building scalable SaaS, AI, analytics, e-commerce, and enterprise platforms.",
+    siteName: "Awais Hassan Portfolio",
+    title: "Awais Hassan - Senior Full Stack Engineer",
+    description:
+      "7+ years delivering scalable web applications, APIs, cloud systems, and AI integrations.",
     images: [
       {
         url: "https://sherazhassanupwork.vercel.app/portfolio-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Muhammad Yasir Aqeel - Portfolio",
+        alt: "Awais Hassan - Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Yasir Aqeel - Senior Full Stack Engineer",
-    description: "7+ years of experience building scalable SaaS, AI-powered systems, and enterprise platforms.",
+    title: "Awais Hassan - Senior Full Stack Engineer",
+    description:
+      "Senior Full Stack Engineer | MERN | MEAN | React | Node.js | Cloud | AI Integration",
   },
   alternates: {
     canonical: "https://sherazhassanupwork.vercel.app",
@@ -85,13 +80,12 @@ export default function RootLayout({
         <link rel="icon" href="/globe.svg" type="image/svg+xml" />
         <link rel="canonical" href="https://sherazhassanupwork.vercel.app" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#0a0c10" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black text-white min-h-screen flex flex-col`}
+        className={`${dmSans.variable} ${geistMono.variable} font-sans min-h-screen flex flex-col`}
       >
         <Navbar />
-
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

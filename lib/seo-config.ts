@@ -1,110 +1,115 @@
 /**
- * SEO Configuration for Muhammad Yasir Aqeel's Portfolio
- * Contains reusable SEO metadata, schema markup, and structured data
+ * SEO Configuration for Awais Hassan's Portfolio
  */
+
+const SITE_URL = "https://sherazhassanupwork.vercel.app";
 
 export const seoConfig = {
   site: {
-    name: "Muhammad Yasir Aqeel - Senior Full Stack Engineer",
-    url: "https://sherazhassan.dev", // Update with your actual domain
-    description: "Senior Full Stack Engineer with 7+ years of experience building scalable SaaS, AI, analytics, e-commerce, and enterprise platforms",
-    image: "https://sherazhassan.dev/portfolio-picture.jpg",
-    email: "codewith.yasiraqeel@gmail.com",
+    name: "Awais Hassan - Senior Full Stack Engineer",
+    url: SITE_URL,
+    description:
+      "Senior Full Stack Engineer with 7+ years specializing in MEAN/MERN stack, cloud deployments, and AI-powered SaaS integrations.",
+    image: `${SITE_URL}/portfolio-image.jpg`,
+    email: "awaishassan5000@gmail.com",
+    phone: "+923703639146",
+    location: "Lahore, Pakistan",
   },
 
   social: {
-    github: "https://github.com/Meanmernapp",
-    linkedin: "https://www.linkedin.com/in/muhammad-yasir-aqeel-32a602413",
+    linkedin: "https://www.linkedin.com/in/awais-hassan-44a514394",
   },
 
   expertise: {
-    title: "Senior Full Stack Engineer | MERN/MEAN | Scalable SaaS Engineer",
+    title: "Senior Full Stack Engineer | MERN | MEAN | AI Integration",
     yearsExperience: "7+",
     skills: [
-      "Full Stack Development",
+      "MERN Stack",
+      "MEAN Stack",
       "React.js",
+      "React Native",
+      "Next.js",
       "Angular",
       "Node.js",
       "NestJS",
-      "Next.js",
-      "Python",
-      "FastAPI",
+      "Express.js",
       "TypeScript",
+      "Python",
+      "GraphQL",
+      "REST APIs",
+      "Microservices",
+      "MySQL",
       "MongoDB",
-      "PostgreSQL",
+      "AWS",
+      "GCP",
+      "Firebase",
       "Docker",
       "Kubernetes",
-      "AWS",
-      "GraphQL",
-      "Microservices",
-      "Kafka",
-      "LLM",
-      "RAG",
-      "LangChain",
-      "System Design",
       "CI/CD",
-      "React Native",
+      "Kafka",
+      "Socket.io",
+      "Electron.js",
+      "AI Integration",
     ],
     specialties: [
-      "Scalable SaaS Engineering",
-      "MERN and MEAN Development",
-      "Cloud, DevOps, and CI/CD",
-      "Microservices and Distributed Systems",
-      "LLM and RAG Integrations",
-      "AI-Powered Search and Automation",
+      "MEAN & MERN Development",
+      "System Design & Database Optimization",
+      "Cloud, DevOps & CI/CD",
+      "AI & LLM Integrations",
+      "Technical Leadership & Mentoring",
     ],
   },
 
   pages: {
     home: {
-      title: "Muhammad Yasir Aqeel - Senior Full Stack Engineer | MERN/MEAN | Scalable SaaS Engineer",
-      description: "Senior Full Stack Engineer with 7+ years of experience building scalable SaaS, AI, analytics, e-commerce, and enterprise platforms.",
+      title: "Awais Hassan - Senior Full Stack Engineer | MERN | MEAN",
+      description:
+        "Senior Full Stack Engineer with 7+ years delivering scalable web apps, high-performance APIs, cloud deployments, and AI-powered SaaS features.",
       keywords: [
-        "Muhammad Yasir Aqeel",
-        "Yasir Aqeel",
+        "Awais Hassan",
         "Full Stack Developer",
         "Senior Software Engineer",
-        "Next.js Developer",
+        "MERN Stack",
+        "MEAN Stack",
         "React Developer",
         "Angular Developer",
-        "AI Developer",
-        "SaaS Engineer",
-        "Web Developer",
-        "Full Stack Engineer",
+        "Node.js Developer",
+        "Next.js Developer",
+        "NestJS Developer",
+        "Python Developer",
+        "AI Integration",
+        "Lahore Pakistan",
       ],
     },
     about: {
-      title: "About Muhammad Yasir Aqeel - Senior Full Stack Engineer",
-      description: "Learn about Muhammad Yasir Aqeel's 7+ years of professional experience in scalable SaaS, AI, analytics, e-commerce, and enterprise platforms.",
+      title: "About Awais Hassan - Senior Full Stack Engineer",
+      description:
+        "Learn about Awais Hassan's 7+ years in MEAN/MERN development, system design, cloud delivery, and AI integration.",
     },
     projects: {
-      title: "Projects - Muhammad Yasir Aqeel Portfolio",
-      description: "Explore Muhammad Yasir Aqeel's portfolio of SaaS, AI, analytics, e-commerce, and enterprise projects built with modern web technologies.",
+      title: "Projects - Awais Hassan Portfolio",
+      description:
+        "Explore Awais Hassan's portfolio of scalable web applications, SaaS platforms, and full-stack projects.",
     },
     contact: {
-      title: "Contact Muhammad Yasir Aqeel - Senior Full Stack Engineer",
-      description: "Get in touch with Muhammad Yasir Aqeel for full-stack development, SaaS engineering, cloud delivery, AI integration, or consultation services.",
+      title: "Contact Awais Hassan - Senior Full Stack Engineer",
+      description:
+        "Contact Awais Hassan for full-stack development, cloud engineering, AI integration, or consultation. Lahore, Pakistan.",
     },
   },
 
-  /**
-   * Schema.org structured data for Person
-   */
   personSchema: {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Muhammad Yasir Aqeel",
-    url: "https://sherazhassan.dev",
-    image: "https://sherazhassan.dev/portfolio-picture.jpg",
-    description: "Senior Full Stack Engineer with 7+ years of experience building scalable SaaS, AI, analytics, e-commerce, and enterprise platforms",
+    name: "Awais Hassan",
+    url: SITE_URL,
+    image: `${SITE_URL}/portfolio-image.jpg`,
+    description:
+      "Senior Full Stack Engineer with 7+ years specializing in MEAN/MERN stack, cloud deployments, and AI integrations.",
     jobTitle: "Senior Full Stack Engineer",
-    birthDate: "",
     nationality: "Pakistani",
     knowsLanguage: ["English", "Urdu"],
-    sameAs: [
-      "https://github.com/Meanmernapp",
-      "https://www.linkedin.com/in/muhammad-yasir-aqeel-32a602413",
-    ],
+    sameAs: ["https://www.linkedin.com/in/awais-hassan-44a514394"],
     workLocation: {
       "@type": "Place",
       address: {
@@ -113,68 +118,39 @@ export const seoConfig = {
         addressLocality: "Lahore",
       },
     },
-    email: "codewith.yasiraqeel@gmail.com",
+    email: "awaishassan5000@gmail.com",
+    telephone: "+923703639146",
   },
 
-  /**
-   * Schema.org structured data for Organization
-   */
   organizationSchema: {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Muhammad Yasir Aqeel - Senior Full Stack Engineer",
-    url: "https://sherazhassan.dev",
-    logo: "https://sherazhassan.dev/globe.svg",
-    description: "Professional Senior Full Stack Engineer specializing in scalable SaaS, AI-powered systems, microservices, cloud delivery, and enterprise platforms",
-    sameAs: [
-      "https://github.com/Meanmernapp",
-      "https://www.linkedin.com/in/muhammad-yasir-aqeel-32a602413",
-    ],
+    name: "Awais Hassan - Senior Full Stack Engineer",
+    url: SITE_URL,
+    logo: `${SITE_URL}/globe.svg`,
+    description:
+      "Professional Senior Full Stack Engineer specializing in MEAN/MERN, microservices, cloud, and AI-powered SaaS.",
+    sameAs: ["https://www.linkedin.com/in/awais-hassan-44a514394"],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Professional Services",
-      email: "codewith.yasiraqeel@gmail.com",
+      email: "awaishassan5000@gmail.com",
+      telephone: "+923703639146",
     },
   },
 
-  /**
-   * BreadcrumbList for navigation SEO
-   */
   breadcrumbSchema: {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: "https://sherazhassan.dev",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "About",
-        item: "https://sherazhassan.dev#about",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Projects",
-        item: "https://sherazhassan.dev/projects",
-      },
-      {
-        "@type": "ListItem",
-        position: 4,
-        name: "Contact",
-        item: "https://sherazhassan.dev#contact",
-      },
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "About", item: `${SITE_URL}#about` },
+      { "@type": "ListItem", position: 3, name: "Projects", item: `${SITE_URL}/projects` },
+      { "@type": "ListItem", position: 4, name: "Contact", item: `${SITE_URL}/contacts` },
     ],
   },
 };
 
-/**
- * Utility function to generate Open Graph meta tags
- */
 export function generateOGTags(title: string, description: string, image?: string) {
   return {
     "og:title": title,
@@ -186,9 +162,6 @@ export function generateOGTags(title: string, description: string, image?: strin
   };
 }
 
-/**
- * Utility function to generate Twitter Card meta tags
- */
 export function generateTwitterTags(title: string, description: string) {
   return {
     "twitter:card": "summary_large_image",

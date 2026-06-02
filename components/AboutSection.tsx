@@ -1,269 +1,89 @@
 "use client";
 
-import { RocketIcon } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import HireMeNow from "./HireMeNow";
-import { TextReveal, AnimatedCounter } from "./AnimationComponents";
+import { AnimatedCounter } from "./AnimationComponents";
+
+const highlights = [
+  "MEAN & MERN development with React.js, React Native, Next.js, Angular, Node.js, NestJS, Express.js, TypeScript, Material-UI, and Tailwind CSS.",
+  "APIs & architecture: REST APIs, GraphQL, microservices, Socket.io, Kafka, Redux, Recoil, and Electron.js for production-grade systems.",
+  "Databases & cloud: MySQL, MongoDB, Firebase, AWS, GCP, Docker, Kubernetes, and CI/CD pipelines with testing and observability.",
+  "AI integration: Python backends with LLM APIs, conversational systems, and automation workflows embedded in SaaS platforms.",
+  "Leadership: leading technical initiatives, mentoring engineers, and delivering end-to-end solutions in distributed remote teams.",
+];
 
 export default function AboutMe() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8 },
-    },
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-    hover: {
-      y: -5,
-      boxShadow: "0 20px 40px rgba(52, 211, 153, 0.2)",
-      transition: { duration: 0.3 },
-    },
-  };
-
   return (
-    <section 
-      className="bg-black text-white py-20 max-w-6xl mx-auto px-6 relative"
+    <section
+      className="border-y border-white/[0.06] bg-[#0d0f14] py-20 px-5 md:px-10"
       itemScope
       itemType="https://schema.org/Person"
     >
-      {/* Animated background */}
-      <motion.div
-        className="absolute top-20 right-10 w-40 h-40 bg-green-400/5 rounded-full blur-3xl"
-        animate={{ x: [0, 30, 0], y: [0, 50, 0] }}
-        transition={{ duration: 15, repeat: Infinity }}
-      />
-
-      <motion.div
-        className="relative z-10"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-      >
-        {/* Header Section */}
-        <motion.div className="space-y-6 max-w-xl mb-16" variants={itemVariants}>
-          <motion.p
-            className="text-sm text-green-400 uppercase tracking-wider font-semibold"
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            About Me
-          </motion.p>
-
-          <TextReveal delay={0.2}>
-            <h2 className="text-lg md:text-2xl font-bold leading-tight" itemProp="about">
-              I'm a Senior Full Stack Engineer with 7+ years of experience building scalable web applications across SaaS, AI, analytics, e-commerce, and enterprise platforms.
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-14 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="section-eyebrow mb-3">01 — About</p>
+            <h2 className="section-title max-w-2xl" itemProp="about">
+              Engineering scalable products end to end
             </h2>
-          </TextReveal>
-
-          <TextReveal delay={0.4}>
-            <p className="hidden" itemProp="description">
-              I'm focused on delivering results that exceed expectations—from clean, maintainable code to seamless user experiences.
-            </p>
-          </TextReveal>
-
-          <TextReveal delay={0.4}>
-            <p className="text-gray-400 text-md" itemProp="description">
-              Skilled in React.js, Next.js, Angular, Node.js, NestJS, TypeScript, MongoDB, PostgreSQL, AWS, Docker, REST APIs, GraphQL, microservices, and LLM integrations.
-            </p>
-          </TextReveal>
-
-          <motion.div variants={itemVariants}>
-            <HireMeNow />
-          </motion.div>
-        </motion.div>
-
-        {/* Main Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-          {/* Left Side - Icon */}
-          <motion.div
-            className="flex justify-center md:justify-start"
-            variants={itemVariants}
-          >
-            <motion.div
-              animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
-              transition={{ duration: 4, repeat: Infinity }}
-            >
-              <RocketIcon size={150} className="text-teal-400/30" />
-            </motion.div>
-          </motion.div>
-
-          {/* Right Side - Skills & Stats */}
-          <motion.div className="space-y-10" variants={containerVariants}>
-            {/* Skills List */}
-            <ul className="space-y-4 text-gray-300 text-md">
-              {[
-                "Frontend: React.js, Next.js, Angular, TypeScript, Tailwind CSS, Material UI, Redux Toolkit, Zustand, React Query, SSR/SSG, accessibility, and performance optimization.",
-                "Backend: Node.js, Express.js, NestJS, Python, FastAPI, Django, Flask, REST APIs, GraphQL, WebSockets, JWT, OAuth2, RBAC, and secure API design.",
-                "Databases: MongoDB, PostgreSQL, MySQL, Redis, Prisma ORM, SQL/NoSQL modeling, aggregation pipelines, query optimization, and ETL workflows.",
-                "Cloud and DevOps: AWS, Docker, Kubernetes, GitHub Actions, CI/CD pipelines, Linux, Nginx, Vercel, monitoring, logging, and observability.",
-                "Architecture and AI: microservices, distributed systems, Kafka, event-driven architecture, multi-tenant SaaS, OpenAI, Claude, LangChain, RAG, vector databases, and AI-powered search.",
-              ].map((point, index) => (
-                <motion.li
-                  key={index}
-                  className="flex items-start space-x-3 group"
-                  variants={itemVariants}
-                  whileHover={{ x: 10 }}
-                >
-                  <motion.span
-                    className="text-green-400 mt-1 text-xl flex-shrink-0"
-                    whileHover={{ scale: 1.5, rotate: 360 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    ●
-                  </motion.span>
-                  <span className="group-hover:text-green-300 transition-colors" itemProp="knows">
-                    {point}
-                  </span>
-                </motion.li>
-              ))}
-            </ul>
-
-            {/* Stats Row */}
-            <motion.div
-              className="grid grid-cols-3 gap-6 text-center text-white bg-gradient-to-r from-teal-400/10 to-green-400/10 p-8 rounded-xl border border-teal-400/20"
-              variants={containerVariants}
-            >
-              {[
-                { from: 0, to: 150, label: "Projects completed", suffix: "+" },
-                { from: 0, to: 7, label: "Years experience", suffix: "+" },
-                { from: 0, to: 4, label: "Certificates", suffix: "+" },
-              ].map((stat, i) => (
-                <motion.div key={i} variants={cardVariants}>
-                  <motion.p className="text-3xl md:text-4xl font-bold text-green-400 mb-2">
-                    <AnimatedCounter
-                      from={stat.from}
-                      to={stat.to}
-                      suffix={stat.suffix}
-                      duration={2}
-                    />
-                  </motion.p>
-                  <p className="text-sm text-gray-400">{stat.label}</p>
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
+          </div>
+          <HireMeNow />
         </div>
 
-        {/* Figma to Code Section */}
-        <motion.div className="mt-20 space-y-8" variants={itemVariants}>
-          <motion.div className="space-y-4" variants={itemVariants}>
-            <h3 className="text-2xl font-bold text-white flex items-center gap-2">
-              <motion.span
-                animate={{ rotate: [0, 10, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                🎨
-              </motion.span>
-              Figma → AI-Powered Code Conversion
-            </h3>
-            <p className="text-gray-400 text-md max-w-2xl">
-              Experienced in collaborating with designers and converting Figma designs into clean, production-ready frontend code using modern component libraries and AI-assisted tooling.
-            </p>
-          </motion.div>
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4"
-            variants={containerVariants}
-          >
-            {[
-              "Pixel-perfect implementation",
-              "Modular and reusable component architecture",
-              "Proper state management",
-              "Clean folder structure",
-              "Optimized UI/UX workflows",
-            ].map((feature, i) => (
-              <motion.div
-                key={i}
-                className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-lg p-4 flex items-center gap-3 hover:border-green-400/50 transition-colors"
-                variants={cardVariants}
-                whileHover="hover"
-              >
-                <motion.span
-                  className="text-green-400 text-lg flex-shrink-0"
-                  whileHover={{ scale: 1.2 }}
-                >
-                  ✓
-                </motion.span>
-                <p className="text-gray-300 text-sm">{feature}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
+        <p className="mb-12 max-w-3xl text-lg leading-relaxed text-slate-400" itemProp="description">
+          Senior Full Stack Engineer with 7+ years specializing in MEAN and MERN stack development—scalable web apps and high-performance APIs with Node.js, Express.js, React, and Angular. Strong in system design, database optimization, and cloud deployments with CI/CD, testing, and observability.
+        </p>
 
-        {/* AI-Ready Boilerplates Section */}
-        <motion.div className="mt-20 space-y-8" variants={itemVariants}>
-          <motion.div className="space-y-4" variants={itemVariants}>
-            <h3 className="text-2xl font-bold text-white flex items-center gap-2">
-              <motion.span
-                animate={{ y: [0, -5, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                🤖
-              </motion.span>
-              AI-Ready Boilerplates & Starter Kits
-            </h3>
-            <p className="text-gray-400 text-md max-w-2xl">
-              Full-stack SaaS foundations with Next.js, NestJS, Prisma, PostgreSQL, AWS, Docker, CI/CD, GraphQL, LLM, and RAG-ready architecture.
+        <div className="mb-14 grid gap-4 sm:grid-cols-2">
+          {highlights.map((point, index) => (
+            <motion.div
+              key={index}
+              className="card-surface p-5"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.05 }}
+            >
+              <span className="mb-3 inline-block font-mono text-xs text-amber-400">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <p className="text-sm leading-relaxed text-slate-300" itemProp="knows">
+                {point}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-3 gap-4">
+          {[
+            { from: 0, to: 150, label: "Projects", suffix: "+" },
+            { from: 0, to: 7, label: "Years", suffix: "+" },
+            { from: 0, to: 4, label: "Certificates", suffix: "+" },
+          ].map((stat, i) => (
+            <div key={i} className="card-surface p-6 text-center">
+              <p className="text-3xl font-bold text-violet-400 md:text-4xl">
+                <AnimatedCounter from={stat.from} to={stat.to} suffix={stat.suffix} duration={2} />
+              </p>
+              <p className="mt-2 text-xs uppercase tracking-wider text-slate-500">{stat.label}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 grid gap-6 md:grid-cols-2">
+          <div className="card-surface p-6">
+            <h3 className="mb-3 text-lg font-bold text-white">Design → Code</h3>
+            <p className="text-sm text-slate-400">
+              Figma to production-ready UI with modular components, clean structure, and optimized workflows.
             </p>
-          </motion.div>
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 gap-6"
-            variants={containerVariants}
-          >
-            {[
-              {
-                title: "Production-ready setups",
-                description: "SaaS, AI, analytics, e-commerce, and enterprise applications with reliable architecture",
-              },
-              {
-                title: "Modular architectures",
-                description: "Microservices, distributed systems, event-driven workflows, Kafka, and multi-tenant SaaS",
-              },
-              {
-                title: "Cloud deployment",
-                description: "Secure, scalable, and optimized for AWS, Docker, Kubernetes, GitHub Actions, and Vercel",
-              },
-              {
-                title: "Full-stack integration",
-                description: "React, Next.js, Angular, Node.js, NestJS, Python, GraphQL, SQL, and NoSQL systems",
-              },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                className="bg-gradient-to-br from-teal-900/20 to-green-900/20 border border-teal-400/30 rounded-lg p-6 space-y-2 hover:border-green-400/60 transition-all"
-                variants={cardVariants}
-                whileHover="hover"
-              >
-                <h4 className="text-green-400 font-bold text-lg">{item.title}</h4>
-                <p className="text-gray-400 text-sm">{item.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
-      </motion.div>
+          </div>
+          <div className="card-surface p-6">
+            <h3 className="mb-3 text-lg font-bold text-white">SaaS & AI Foundations</h3>
+            <p className="text-sm text-slate-400">
+              Next.js, NestJS, Prisma, PostgreSQL, AWS, Docker, CI/CD, GraphQL, and LLM-ready architecture for fast MVPs.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
