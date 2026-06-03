@@ -1,31 +1,31 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, PhoneCall } from "lucide-react";
+import { Globe, MapPin } from "lucide-react";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const contacts = [
   {
     label: "LinkedIn",
-    sub: "Awais Hassan",
+    sub: "Muhammad Farhan",
     icon: <FaLinkedin size={22} />,
-    href: "https://www.linkedin.com/in/awais-hassan-44a514394",
+    href: "https://www.linkedin.com/in/muhammad-farhan-01a835413",
   },
   {
     label: "Email",
-    sub: "awaishassan5000@gmail.com",
+    sub: "codewithfarhan1@gmail.com",
     icon: <FaEnvelope size={22} />,
-    href: "mailto:awaishassan5000@gmail.com",
+    href: "mailto:codewithfarhan1@gmail.com",
   },
   {
-    label: "Phone",
-    sub: "+92 370 3639146",
-    icon: <PhoneCall size={22} />,
-    href: "tel:+923703639146",
+    label: "Availability",
+    sub: "Open to Remote · All time zones",
+    icon: <Globe size={22} />,
+    href: "#",
   },
   {
     label: "Location",
-    sub: "Lahore, Pakistan",
+    sub: "Pakistan (UTC+5)",
     icon: <MapPin size={22} />,
     href: "#",
   },
@@ -38,7 +38,7 @@ export default function ContactSection() {
         <p className="section-eyebrow mb-3">05 — Contact</p>
         <h2 className="section-title mb-4">Get in touch</h2>
         <p className="mb-12 text-slate-400">
-          Have a project in mind? Reach out via email, phone, or LinkedIn.
+          Available for global remote roles. Reach out via email or LinkedIn.
         </p>
 
         <div className="grid gap-4">

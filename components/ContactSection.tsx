@@ -5,14 +5,14 @@ import { Button } from "@/components/ui/button";
 import HireMeNow from "./HireMeNow";
 
 const resumeSpecializations = [
-  "MEAN & MERN Stack - Scalable web applications and high-performance APIs with Node.js, Express.js, React, and Angular.",
-  "System Design & Databases - Performance optimization, MySQL, MongoDB, and production-ready data modeling.",
-  "Cloud & DevOps - AWS, GCP, Firebase, Docker, Kubernetes, and CI/CD with testing and observability.",
-  "APIs & Microservices - REST APIs, GraphQL, Socket.io, Kafka, and distributed service architecture.",
-  "AI Integration - Python backends with LLM APIs, conversational systems, and SaaS automation workflows.",
-  "Frontend Engineering - React.js, React Native, Next.js, Angular, Material-UI, Tailwind, Redux, and Recoil.",
-  "Mobile & Desktop - React Native and Electron.js for cross-platform product delivery.",
-  "Technical Leadership - Leading initiatives, mentoring engineers, and remote end-to-end delivery.",
+  "Full Stack Development - React.js, Next.js, Angular, TypeScript, and performance-optimized responsive UIs.",
+  "Backend & APIs - Node.js, NestJS, Python, FastAPI, REST, GraphQL, WebSockets, JWT, OAuth2, and RBAC.",
+  "Databases - PostgreSQL, MongoDB, MySQL, Redis, Prisma ORM, modeling, query optimization, and ETL pipelines.",
+  "Cloud & DevOps - AWS, Docker, Kubernetes, GitHub Actions, CI/CD, Nginx, Vercel, and Linux deployments.",
+  "Architecture - Microservices, Kafka, event-driven design, serverless, multi-tenant SaaS, and system design.",
+  "AI & LLMs - OpenAI, Claude, LangChain, RAG, agentic workflows, vector DBs, AI voice agents, and n8n automation.",
+  "Delivery Impact - 30% faster time-to-market, 40% lower API latency, 50% faster release cycles.",
+  "Remote Leadership - 3+ years with US cross-functional teams; mentoring, Agile/Scrum, and global time zones.",
 ];
 
 export default function ContactFooterSpecialization() {
@@ -44,10 +44,10 @@ export default function ContactFooterSpecialization() {
             Ready to start your next project?
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-slate-400">
-            Open to full-time, contract, and consulting work. Based in Lahore — available remotely worldwide.
+            Open to full-time, contract, and consulting roles. Based in Pakistan (UTC+5) — available for remote work across all time zones.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="mailto:awaishassan5000@gmail.com" target="_blank" rel="noopener noreferrer">
+            <a href="mailto:codewithfarhan1@gmail.com" target="_blank" rel="noopener noreferrer">
               <Button className="rounded-full bg-amber-500 px-8 font-semibold text-black hover:bg-amber-400">
                 Get In Touch
               </Button>

@@ -1,141 +1,128 @@
 /**
- * SEO Configuration for Awais Hassan's Portfolio
+ * SEO Configuration for Muhammad Farhan's Portfolio
  */
 
 const SITE_URL = "https://sherazhassanupwork.vercel.app";
 
 export const seoConfig = {
   site: {
-    name: "Awais Hassan - Senior Full Stack Engineer",
+    name: "Muhammad Farhan - Senior Full Stack / AI Engineer",
     url: SITE_URL,
     description:
-      "Senior Full Stack Engineer with 7+ years specializing in MEAN/MERN stack, cloud deployments, and AI-powered SaaS integrations.",
+      "Senior Full Stack and AI Engineer with 8+ years building production-grade SaaS, AI, analytics, e-commerce, and enterprise applications.",
     image: `${SITE_URL}/portfolio-image.jpg`,
-    email: "awaishassan5000@gmail.com",
-    phone: "+923703639146",
-    location: "Lahore, Pakistan",
+    email: "codewithfarhan1@gmail.com",
+    location: "Pakistan (UTC+5) · Open to Remote",
   },
 
   social: {
-    linkedin: "https://www.linkedin.com/in/awais-hassan-44a514394",
+    linkedin: "https://www.linkedin.com/in/muhammad-farhan-01a835413",
   },
 
   expertise: {
-    title: "Senior Full Stack Engineer | MERN | MEAN | AI Integration",
-    yearsExperience: "7+",
+    title: "Senior Full Stack / AI Engineer",
+    yearsExperience: "8+",
     skills: [
-      "MERN Stack",
-      "MEAN Stack",
       "React.js",
-      "React Native",
       "Next.js",
-      "Angular",
       "Node.js",
       "NestJS",
-      "Express.js",
       "TypeScript",
       "Python",
-      "GraphQL",
-      "REST APIs",
-      "Microservices",
-      "MySQL",
+      "PostgreSQL",
       "MongoDB",
-      "AWS",
-      "GCP",
-      "Firebase",
-      "Docker",
+      "Redis",
+      "GraphQL",
       "Kubernetes",
-      "CI/CD",
+      "AWS",
       "Kafka",
-      "Socket.io",
-      "Electron.js",
-      "AI Integration",
+      "LangChain",
+      "RAG",
+      "OpenAI",
+      "Microservices",
     ],
     specialties: [
-      "MEAN & MERN Development",
-      "System Design & Database Optimization",
+      "Full Stack & AI Engineering",
+      "SaaS & Enterprise Platforms",
       "Cloud, DevOps & CI/CD",
-      "AI & LLM Integrations",
+      "LLM, RAG & Agentic Workflows",
       "Technical Leadership & Mentoring",
     ],
   },
 
   pages: {
     home: {
-      title: "Awais Hassan - Senior Full Stack Engineer | MERN | MEAN",
+      title: "Muhammad Farhan - Senior Full Stack / AI Engineer",
       description:
-        "Senior Full Stack Engineer with 7+ years delivering scalable web apps, high-performance APIs, cloud deployments, and AI-powered SaaS features.",
+        "8+ years delivering scalable web apps, AI integrations, and cloud-native systems. Open to remote roles worldwide.",
       keywords: [
-        "Awais Hassan",
-        "Full Stack Developer",
+        "Muhammad Farhan",
+        "Full Stack Engineer",
+        "AI Engineer",
         "Senior Software Engineer",
-        "MERN Stack",
-        "MEAN Stack",
-        "React Developer",
-        "Angular Developer",
-        "Node.js Developer",
         "Next.js Developer",
-        "NestJS Developer",
-        "Python Developer",
-        "AI Integration",
-        "Lahore Pakistan",
+        "React Developer",
+        "Node.js Developer",
+        "LangChain",
+        "RAG",
+        "OpenAI",
+        "Kubernetes",
+        "AWS",
+        "Remote Developer Pakistan",
       ],
     },
     about: {
-      title: "About Awais Hassan - Senior Full Stack Engineer",
+      title: "About Muhammad Farhan - Senior Full Stack / AI Engineer",
       description:
-        "Learn about Awais Hassan's 7+ years in MEAN/MERN development, system design, cloud delivery, and AI integration.",
+        "Learn about Muhammad Farhan's 8+ years in full-stack development, AI engineering, cloud delivery, and remote collaboration.",
     },
     projects: {
-      title: "Projects - Awais Hassan Portfolio",
+      title: "Projects - Muhammad Farhan Portfolio",
       description:
-        "Explore Awais Hassan's portfolio of scalable web applications, SaaS platforms, and full-stack projects.",
+        "Explore Muhammad Farhan's portfolio of SaaS, AI, analytics, e-commerce, and enterprise full-stack projects.",
     },
     contact: {
-      title: "Contact Awais Hassan - Senior Full Stack Engineer",
+      title: "Contact Muhammad Farhan - Senior Full Stack / AI Engineer",
       description:
-        "Contact Awais Hassan for full-stack development, cloud engineering, AI integration, or consultation. Lahore, Pakistan.",
+        "Contact Muhammad Farhan for full-stack development, AI integration, cloud engineering, or consulting. Open to remote.",
     },
   },
 
   personSchema: {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Awais Hassan",
+    name: "Muhammad Farhan",
     url: SITE_URL,
     image: `${SITE_URL}/portfolio-image.jpg`,
     description:
-      "Senior Full Stack Engineer with 7+ years specializing in MEAN/MERN stack, cloud deployments, and AI integrations.",
-    jobTitle: "Senior Full Stack Engineer",
+      "Senior Full Stack and AI Engineer with 8+ years building production-grade web applications across SaaS, AI, analytics, and enterprise domains.",
+    jobTitle: "Senior Full Stack / AI Engineer",
     nationality: "Pakistani",
     knowsLanguage: ["English", "Urdu"],
-    sameAs: ["https://www.linkedin.com/in/awais-hassan-44a514394"],
+    sameAs: ["https://www.linkedin.com/in/muhammad-farhan-01a835413"],
     workLocation: {
       "@type": "Place",
       address: {
         "@type": "PostalAddress",
         addressCountry: "PK",
-        addressLocality: "Lahore",
       },
     },
-    email: "awaishassan5000@gmail.com",
-    telephone: "+923703639146",
+    email: "codewithfarhan1@gmail.com",
   },
 
   organizationSchema: {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Awais Hassan - Senior Full Stack Engineer",
+    name: "Muhammad Farhan - Senior Full Stack / AI Engineer",
     url: SITE_URL,
     logo: `${SITE_URL}/globe.svg`,
     description:
-      "Professional Senior Full Stack Engineer specializing in MEAN/MERN, microservices, cloud, and AI-powered SaaS.",
-    sameAs: ["https://www.linkedin.com/in/awais-hassan-44a514394"],
+      "Senior Full Stack and AI Engineer specializing in SaaS, LLM integrations, microservices, and cloud-native delivery.",
+    sameAs: ["https://www.linkedin.com/in/muhammad-farhan-01a835413"],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Professional Services",
-      email: "awaishassan5000@gmail.com",
-      telephone: "+923703639146",
+      email: "codewithfarhan1@gmail.com",
     },
   },
 

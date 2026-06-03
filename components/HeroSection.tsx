@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import HireMeNow from "./HireMeNow";
 
 const skills = [
-  "React", "Next.js", "Angular", "Node.js", "NestJS", "Python",
-  "GraphQL", "AWS", "Docker", "Kubernetes", "MongoDB", "Kafka",
+  "React", "Next.js", "Node.js", "NestJS", "TypeScript", "Python",
+  "PostgreSQL", "MongoDB", "Redis", "GraphQL", "AWS", "Kubernetes", "Kafka", "LangChain", "RAG",
 ];
 
 export default function HeroSection() {
@@ -31,16 +31,16 @@ export default function HeroSection() {
         >
           <span className="inline-flex items-center gap-2 rounded-full border border-violet-500/30 bg-violet-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-violet-300">
             <span className="h-2 w-2 rounded-full bg-amber-400" />
-            Senior Full Stack Engineer
+            Senior Full Stack / AI Engineer
           </span>
 
           <h1 className="text-4xl font-bold leading-[1.1] tracking-tight md:text-6xl lg:text-7xl" itemProp="name">
             Hi, I&apos;m{" "}
-            <span className="accent-gradient">Awais Hassan</span>
+            <span className="accent-gradient">Muhammad Farhan</span>
           </h1>
 
           <p className="max-w-xl text-lg text-slate-400" itemProp="jobTitle">
-            7+ years building scalable MEAN/MERN apps, cloud systems, and AI-powered SaaS — based in Lahore, Pakistan.
+            8+ years building production-grade SaaS, AI, and enterprise apps — open to remote roles globally (Pakistan, UTC+5).
           </p>
 
           <div className="flex flex-wrap gap-2">
@@ -75,9 +75,9 @@ export default function HeroSection() {
           <p className="mb-6 text-sm font-medium text-slate-500">At a glance</p>
           <div className="space-y-6">
             {[
-              { value: "7+", label: "Years experience" },
-              { value: "150+", label: "Projects delivered" },
-              { value: "MERN/MEAN", label: "Core stack" },
+              { value: "8+", label: "Years experience" },
+              { value: "40%", label: "API latency reduced" },
+              { value: "3+", label: "Years remote (US teams)" },
             ].map((item) => (
               <div key={item.label} className="flex items-baseline justify-between border-b border-white/[0.06] pb-4 last:border-0 last:pb-0">
                 <span className="text-2xl font-bold text-white md:text-3xl">{item.value}</span>
@@ -86,7 +86,7 @@ export default function HeroSection() {
             ))}
           </div>
           <p className="mt-8 text-sm leading-relaxed text-slate-400" itemProp="description">
-            React.js, Node.js, NestJS, Express.js, Python, GraphQL, Microservices, MySQL, MongoDB, AWS, GCP, Firebase, Redux, and Socket.io.
+            React.js, Next.js, Node.js, NestJS, TypeScript, Python, PostgreSQL, MongoDB, Redis, GraphQL, Kubernetes, AWS, Kafka, OpenAI, Claude, LangChain, and vector databases.
           </p>
         </motion.div>
       </div>

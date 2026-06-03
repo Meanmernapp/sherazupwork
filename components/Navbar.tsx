@@ -15,7 +15,7 @@ export default function Navbar() {
           href="/"
           className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-violet-600 to-amber-500 text-sm font-bold text-white"
         >
-          AH
+          MF
         </Link>
 
         <nav className="flex flex-1 items-center justify-center gap-1 overflow-x-auto">
@@ -40,7 +40,7 @@ export default function Navbar() {
         </nav>
 
         <Link
-          href="mailto:awaishassan5000@gmail.com"
+          href="mailto:codewithfarhan1@gmail.com"
           className="hidden rounded-lg bg-violet-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-violet-500 sm:inline-block"
         >
           Contact
